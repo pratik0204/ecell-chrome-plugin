@@ -7,7 +7,7 @@
 //   });
 // });
 
-
+///////////////////////////////////////////////////////////////////////
 var elements = document.getElementsByClassName("shot");
 
 var myFunction = function() {
@@ -19,6 +19,20 @@ var myFunction = function() {
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', myFunction, false);
 }
+
+//////////////////////////////////////////////////////////////////////////
+
+// var ele=document.getElementsByClassName("close");
+
+// var close_func = function(){
+//   $("close").parent().css( "display", "none" );
+// }
+
+// for (var i = 0; i < ele.length; i++) {
+//   ele[i].addEventListener('click', close_func, false);
+// }
+
+//////////////////////////////////////////////////////////////////////////////
 
 window.addEventListener('click',function(e){
   if(e.target.href!==undefined){
