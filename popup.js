@@ -34,8 +34,12 @@ for (var i = 0; i < elements.length; i++) {
 
 //////////////////////////////////////////////////////////////////////////////
 
-window.addEventListener('click',function(e){
-  if(e.target.href!==undefined){
-    chrome.tabs.create({url:e.target.href})
-  }
-});
+// window.addEventListener('click',function(e){
+//   if(e.target.href!==undefined){
+//     chrome.tabs.create({url:e.target.href})
+//   }
+// });
+
+///////////////////////////////////////////////////////////////////////////////
+
+// chrome.browserAction.setBadgeText({"text":"4"})
