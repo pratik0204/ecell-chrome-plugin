@@ -9,9 +9,10 @@
         "16":"logo16.png"
     },
     "browser_action":{
-        "default_icon":"logo16.png",
-        "default_popup":"popup.html"
+        "default_icon":"logo16.png"
     },
+
+    "web_accessible_resources":["teesco.html"],
 
     "background":{
         "scripts":["background.js"],
@@ -20,7 +21,7 @@
 
     "content_scripts":[
         {
-            "matches": ["http://*/*","https://*/*"],
+            "matches": ["<all_urls>"],
             "js":["content-script.js","jquerry.js"]
         }
     ],

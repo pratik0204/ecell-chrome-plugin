@@ -1,13 +1,94 @@
-<html>
-<script src="screenshot.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="screenshot.js"></script>
+    <title>Screenshot Preview</title>
+    <link rel="stylesheet" href="material.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+  </head>
+  <style>
+    .demo-card-wide.mdl-card {
+      width: 955px;
+    }
+    .demo-card-wide > .mdl-card__title {
+      color: #fff;
+      height: 480px;
+    }
+    .demo-card-wide > .mdl-card__menu {
+      color: #fff;
+    }
+    #screenshot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0px 30px #333;
+      border-radius: 8px;
+    }
+    body {
+      background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+    }
+    a,
+    i {
+      text-decoration: none;
+      color: antiquewhite;
+    }
+    i {
+      padding-right: 5px;
+    }
+    #text {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #button-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    #button-container button {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  </style>
+  <body>
 
-<body>
-    <h2>Preview</h2>
-    <img id="target" src="white.png" height="480">
-    <div>
-        <a id="down" href="" download="snapshot.jpeg">Download Image Button</a>
+    <div id="screenshot" class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title ">
+        <img id="target" src="white.png" height="480" />
+      </div>
+      <div id="text" class="mdl-card__supporting-text">
+        Screenshot successfully captured. Share the screenshot now!
+      </div>
+      <div id="button-container" class="mdl-card__actions mdl-card--border">
+        <div class="box-1">
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+          >
+            <i class="material-icons animated infinite slideInDown"
+              >cloud_download</i
+            >
+            <a id="down" href="" download="snapshot.jpeg">Download</a>
+          </button>
+        </div>
+        <div class="box-2">
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+          >
+            <i class="material-icons">refresh</i>
+            <a href="#">Try Again</a>
+          </button>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
